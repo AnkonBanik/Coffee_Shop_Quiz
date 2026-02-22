@@ -1,0 +1,15 @@
+a. price updates by sql
+b.
+
+
+1. Merging First Name and Last Name for creating a new column Full Name by using DAX Query
+Full Name = customers[First_name] & " " & customers[Last_name]
+
+2. Day Number of Week generated from orders.Order_time 
+Day_Num = WEEKDAY(orders[Order_time].[Date],1)
+
+3. Day Name generated from orders.Day_Num
+Day_Name = FORMAT(orders[Order_time],"ddd")
+
+4. Day Type generated from orders.Day_Name
+Day_Type = IF(orders[Day_Name] = "Fri", "Weekend", "Weekday")
